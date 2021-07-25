@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Homepage</title>
+</head>
+<body>
+    <div class="container"> 
+    <!--Navigation Bar-->
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Homepage</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand-logo">
+                        <img src="/images/home_page_images/ski.logo.transparent.png" alt="ski logo">
+                </div>
+            </div>
+
+        </div>
+        <!--Ski Tour Options-->
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                <div class="portfolio-item-wrapper">
+                    <div class="img-portfolio-background" style="background-image:url(/images/home_page_images/Glen_Chutes.jpg)"></div>
+                    <div class="imag-text-wrapper">
+                        
+                        <div class="subtitle">Amazing chute with giant walls on the East Side.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="img-portfolio-background" style="background-image:url(/images/home_page_images/ESM.JPG)">
+                    </div>
+                    <div class="imag-text-wrapper">
+                        <div class="subtitle">Big day and hard approach, not for the faint of heart.
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="img-portfolio-background" style="background-image:url(/images/home_page_images/gash.JPG)">
+                    </div>
+                    <div class="imag-text-wrapper">
+                        <div class="subtitle">Classic Bitterroot ski tour that has one of the best approaches.
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="img-portfolio-background" style="background-image:url(/images/home_page_images/St_Mary_B-Root.jpg)">
+                    </div>
+                    <div class="imag-text-wrapper">
+                        <div class="subtitle">Great spring skiing objective. Skiing down into unamed lake.
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="img-portfolio-background" style="background-image:url(/images/home_page_images/Grey_Wolf.jpg)">
+                    </div>
+                    <div class="imag-text-wrapper">
+                        <div class="logo-wrapper">
+                            <!--<img src="" alt="Grey Wolf"> this allows you to add a logo image, works best if background of logo is transparent.-->
+                        </div>
+                        <div class="subtitle">Big and intimidating peak with a beautiful Col. down the west face.
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="portfolio-item-wrapper">
+                    <div class="img-portfolio-background" style="background-image:url(/images/home_page_images/glen_tour.jpeg)">
+                    </div>
+                    <div class="imag-text-wrapper">
+                        <div class="logo-wrapper">
+                            <!--<img src="" alt="Glen Lake Tour">-->
+                        </div>
+                        <div class="subtitle">Long approach but well worth the effort for safe skiing at beautiful Glen Lake.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+        portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+                /*console.log(portfolioItem.childNodes[1].classList); use console.log to help debug*/
+                portfolioItem.childNodes[1].classList.add('img-darken');
+            })
+            portfolioItem.addEventListener('mouseout', () => {
+                portfolioItem.childNodes[1].classList.remove('img-darken');
+            })
+        })
+</script>
+</html>
